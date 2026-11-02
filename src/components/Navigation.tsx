@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Sliders, Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface NavigationProps {
-  onOpenSettings: () => void;
+  onOpenSettings?: () => void;
 }
 
-export function Navigation({ onOpenSettings }: NavigationProps) {
+export function Navigation({ onOpenSettings: _onOpenSettings }: NavigationProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -70,21 +70,11 @@ export function Navigation({ onOpenSettings }: NavigationProps) {
             ))}
           </nav>
 
-          {/* Zone 3: 1 Primary Action */}
-          <div className="flex items-center gap-3 shrink-0">
-            <button
-              onClick={onOpenSettings}
-              className="flex items-center gap-2 px-3.5 py-1.5 text-xs font-sans-clean tracking-wider text-[#F3EEEE] bg-[#151313] hover:bg-[#8B101D]/25 border border-[#8B101D]/40 rounded-full transition-all duration-200 cursor-pointer whitespace-nowrap shrink-0"
-              title="Personalize your universe"
-            >
-              <Sliders className="w-3.5 h-3.5 text-[#C51F35]" />
-              <span className="hidden sm:inline">Personalize</span>
-            </button>
-
-            {/* Mobile menu button */}
+          {/* Zone 3: Mobile Menu Trigger (hidden on desktop) */}
+          <div className="flex items-center gap-3 shrink-0 md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 text-[#AAA3A3] hover:text-[#F3EEEE] transition-colors"
+              className="p-2 text-[#AAA3A3] hover:text-[#F3EEEE] transition-colors"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -111,17 +101,7 @@ export function Navigation({ onOpenSettings }: NavigationProps) {
               </a>
             ))}
           </nav>
-          <div className="pt-6 border-t border-[#151313] flex flex-col gap-4">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenSettings();
-              }}
-              className="w-full flex items-center justify-center gap-2 py-3 bg-[#151313] border border-[#8B101D]/40 text-[#F3EEEE] rounded-lg font-sans-clean text-xs tracking-wider"
-            >
-              <Sliders className="w-4 h-4 text-[#C51F35]" />
-              Edit Names, Dates & Letters
-            </button>
+          <div className="pt-6 border-t border-[#151313]">
             <p className="text-[11px] text-[#AAA3A3]/70 text-center font-sans-clean">
               Our favorite memories and little love notes.
             </p>

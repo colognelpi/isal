@@ -120,13 +120,13 @@ export const DEFAULT_RELATIONSHIP_CONFIG: RelationshipConfig = {
       id: 4,
       question: "Which quiet memory do I replay whenever I miss you?",
       options: [
-        "The late-night drive with the windows down and our song on repeat",
+        "The nightdrive when we talk about anything and we giggle",
         "Sitting together in quiet comfort without having to say a word",
         "The gentle way you rested your head on my shoulder when you got sleepy",
         "When we couldn't stop laughing over the silliest little inside joke"
       ],
       correctIndex: 0,
-      sweetComment: "Windows rolled down, your hand in mine, singing at the top of our lungs."
+      sweetComment: "Talking about anything and everything with you while we giggle into the night."
     },
     {
       id: 5,
@@ -510,6 +510,11 @@ export function loadRelationshipConfig(): RelationshipConfig {
       parsed.quizQuestions[1].options[0] = "You did";
       parsed.quizQuestions[1].options[1] = "I did";
       parsed.quizQuestions[1].correctIndex = 1;
+    }
+    if (parsed.quizQuestions && parsed.quizQuestions[3]) {
+      parsed.quizQuestions[3].options[0] = "The nightdrive when we talk about anything and we giggle";
+      parsed.quizQuestions[3].correctIndex = 0;
+      parsed.quizQuestions[3].sweetComment = "Talking about anything and everything with you while we giggle into the night.";
     }
     if (parsed.quizQuestions && parsed.quizQuestions[4]?.options?.[0] !== "Sure Thing by Miguel") {
       parsed.quizQuestions[4].options[0] = "Sure Thing by Miguel";
