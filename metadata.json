@@ -1,0 +1,6 @@
+{
+  "name": "ONLY US — An Interactive Monthsiversary Experience",
+  "description": "A private digital universe and interactive romantic monthsiversary gift featuring playable mini-games, love letters, memory archives, and cinematic storytelling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

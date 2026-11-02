@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ONLY US — An Interactive Monthsiversary Experience</title>
+    <meta name="description" content="A private digital universe and interactive romantic monthsiversary gift with mini-games, memories, and letters." />
+    <meta property="og:title" content="ONLY US — An Interactive Monthsiversary Experience" />
+    <meta property="og:description" content="A private digital universe and interactive romantic monthsiversary gift with mini-games, memories, and letters." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://www.google.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#080808] text-[#F3EEEE] antialiased selection:bg-[#8B101D] selection:text-white overflow-x-hidden">
+    <!-- Persistent Hidden YouTube Audio Container -->
+    <div
+      id="youtube-audio-container"
+      style="position: fixed; top: -9999px; left: -9999px; width: 200px; height: 200px; opacity: 0; pointer-events: none;"
+      aria-hidden="true"
+    ></div>
+
+    <div id="root"></div>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

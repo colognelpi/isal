@@ -1,0 +1,60 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-display: 'Cinzel', serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #080808;
+    color: #F3EEEE;
+  }
+}
+
+.font-serif-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-sans-clean {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom glow and atmosphere utility classes */
+.glow-crimson {
+  box-shadow: 0 0 35px -5px rgba(197, 31, 53, 0.45);
+}
+
+.glow-crimson-subtle {
+  box-shadow: 0 0 20px -3px rgba(139, 16, 29, 0.35);
+}
+
+.text-glow-crimson {
+  text-shadow: 0 0 24px rgba(197, 31, 53, 0.6);
+}
+
+.text-glow-soft {
+  text-shadow: 0 0 16px rgba(243, 238, 238, 0.4);
+}
+
+/* Custom smooth dark scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+::-webkit-scrollbar-thumb {
+  background: #25161A;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8B101D;
+}
